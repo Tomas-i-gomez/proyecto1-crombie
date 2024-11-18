@@ -1,5 +1,5 @@
 import { categorias , CategoriaType } from "@/app/db/categorias";
-import { productos, ProductoCalzado } from "@/app/db/productosCalzado";
+import { productos, ProductoCalzado } from "@/app/db/productos";
 import Link from "next/link";
 
 

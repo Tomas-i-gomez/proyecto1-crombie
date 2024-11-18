@@ -1,4 +1,4 @@
-import {  productos , ProductoCalzado } from "@/app/db/productosCalzado";
+import {  productos , ProductoCalzado } from "@/app/db/productos";
 
 
 export default async function Productos ({
