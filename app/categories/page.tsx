@@ -36,17 +36,18 @@ function Page() {
       key={index}
       className="flex flex-col items-center transition duration-300 transform hover:scale-105"
     >
-      <Image
+      
+      <Link
+        href={category.link}
+        className="mt-2 text-lg font-semibold text-gray-800 hover:text-blue-600 transition duration-300"
+      >
+        <Image
         width={300}
         height={150}
         src={category.src}
         alt={category.alt}
         className="rounded-lg shadow-md hover:shadow-lg hover:opacity-90"
       />
-      <Link
-        href={category.link}
-        className="mt-2 text-lg font-semibold text-gray-800 hover:text-blue-600 transition duration-300"
-      >
         {category.label}
       </Link>
     </div>

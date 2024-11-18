@@ -26,6 +26,7 @@ export default async function Categoria ({
                 href={`${mostrarCategoria.name}/${producto.titulo}`}
                 className="block p-4 border rounded-lg shadow hover:shadow-lg transition"
                 >
+                <img src={producto.urlImagen} alt={producto.titulo} /> 
                 <h2 className="text-lg font-semibold">{producto.titulo}</h2>
                 <p className="text-gray-600">{producto.descripcion}</p>
                 <p className="text-blue-500 font-bold">${producto.precio}</p>
