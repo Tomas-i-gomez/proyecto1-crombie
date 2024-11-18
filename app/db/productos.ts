@@ -1,4 +1,4 @@
-export type Productos = {
+export type TypeProductos = {
   titulo: string;
   urlImagen: string;
   precio: number;
@@ -7,7 +7,7 @@ export type Productos = {
   }
   
   
-  export const productosDb: Productos[] = [
+  export const productosDb: TypeProductos[] = [
       {
         titulo: "zapatos",
         urlImagen: "https://example.com/pelota-futbol.jpg",

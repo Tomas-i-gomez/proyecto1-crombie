@@ -10,25 +10,25 @@ function Page() {
     {
       src: "/images/calzado.webp",
       alt: "Calzado",
-      link: "/calzado",
+      link: "/categories/calzado",
       label: "Calzado",
     },
     {
       src: "/images/ropa.webp",
       alt: "Ropa",
-      link: "/ropa",
+      link: "/categories/ropa",
       label: "Ropa",
     },
     {
       src: "/images/accesorios.webp",
       alt: "Accesorios",
-      link: "/accesorios",
+      link: "/categories/accesorios",
       label: "Accesorios",
     },
     {
       src: "/images/perfumes.webp",
       alt: "Perfumes",
-      link: "/perfumes",
+      link: "/categories/perfumes",
       label: "Perfumes",
     },
   ].map((category, index) => (

@@ -6,14 +6,11 @@ import Link from "next/link";
 export default async function Categoria ({
     params,
     }: {
-    params: Promise <{ categoriaParams: string}>;
+    params: Promise <{ categoriaId: string}>;
     }) {
-        const categoria = (await params).categoriaParams;
+        const categoria = (await params).categoriaId;
 
-        const listaCategoria: CategoriaType[] = categorias;
-
-        const mostrarCategoria: CategoriaType | undefined = listaCategoria.find ((cat) => cat.name.toLowerCase() === categoria);
-
+        const mostrarCategoria: CategoriaType | undefined = categorias.find((cat) => cat.name.toLowerCase() === categoria);
 
         if (!mostrarCategoria) {
             return <h1>La categoría no existe</h1>;
@@ -26,7 +23,7 @@ export default async function Categoria ({
               {productosDb.filter((producto) => producto.categoria.toLowerCase() === mostrarCategoria.name.toLowerCase()).map((producto) => (
                 <Link
                 key={producto.titulo}
-                href={`/${mostrarCategoria.name}/${producto.titulo}`}
+                href={`${mostrarCategoria.name}/${producto.titulo}`}
                 className="block p-4 border rounded-lg shadow hover:shadow-lg transition"
                 >
                 <h2 className="text-lg font-semibold">{producto.titulo}</h2>
