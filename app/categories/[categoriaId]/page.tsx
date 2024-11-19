@@ -19,14 +19,14 @@ export default async function Categoria ({
           return (
             <>
               <h1 className="text-2xl font-bold">Categoría: {mostrarCategoria.name}</h1>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-4">
               {productosDb.filter((producto) => producto.categoria.toLowerCase() === mostrarCategoria.name.toLowerCase()).map((producto) => (
                 <Link
                 key={producto.titulo}
                 href={`${mostrarCategoria.name}/${producto.titulo}`}
                 className="block p-4 border rounded-lg shadow hover:shadow-lg transition"
                 >
-                <img src={producto.urlImagen} alt={producto.titulo} /> 
+                <img className="rounded-lg shadow-md hover:shadow-lg hover:opacity-90" src={producto.urlImagen} alt={producto.titulo} /> 
                 <h2 className="text-lg font-semibold">{producto.titulo}</h2>
                 <p className="text-gray-600">{producto.descripcion}</p>
                 <p className="text-blue-500 font-bold">${producto.precio}</p>
